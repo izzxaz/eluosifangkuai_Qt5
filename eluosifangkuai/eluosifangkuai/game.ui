@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gameClass</class>
+ <widget class="QMainWindow" name="gameClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>513</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>513</width>
+    <height>513</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>513</width>
+    <height>513</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>俄罗斯方块</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="game.qrc">
+    <normaloff>:/game/icon.png</normaloff>:/game/icon.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/game/logo.png);</string>
+   </property>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>440</y>
+      <width>461</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>513</width>
+      <height>513</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 0px;
+border-style: solid;
+background-image: url(:/game/nonborder.png);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>478</x>
+      <y>10</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/game/close32.png);
+background-image: url(:/game/透明.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>240</y>
+      <width>64</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/game/start64.png);
+background-image: url(:/game/透明.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>8</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/game/return64.png);
+background-image: url(:/game/透明.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>pushButton_2</zorder>
+   <zorder>graphicsView</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_3</zorder>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>开始</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>回到主界面</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="game.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>gameClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>graphicsView</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>676</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>graphicsView</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>261</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>19</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>19</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

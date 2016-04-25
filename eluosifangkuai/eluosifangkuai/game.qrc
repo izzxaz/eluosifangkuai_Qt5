@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="game">
+    <file>nonborder.png</file>
+    <file>background-nonborder.png</file>
+    <file>return64.png</file>
+    <file>background.png</file>
+    <file>start64.png</file>
+    <file>close32.png</file>
+    <file>透明.png</file>
+    <file>resizeApi (1).png</file>
+    <file>background.png</file>
+    <file>background.png</file>
+    <file>unnamed.png</file>
+    <file>timg.jpg</file>
+    <file>logo.png</file>
+    <file>icon.png</file>
+  </qresource>
+</RCC>
