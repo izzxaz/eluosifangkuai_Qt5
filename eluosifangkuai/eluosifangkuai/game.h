@@ -14,6 +14,8 @@ class game : public QMainWindow
 public:
 	game(QWidget *parent = 0);
 	QString zh(string &);
+	void timerEvent(QTimerEvent *timer);
+	int m_getactive_timer;
 	~game();
 public slots:
 	int ReadyToStart();

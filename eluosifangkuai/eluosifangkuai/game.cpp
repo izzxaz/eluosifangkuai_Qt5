@@ -1,14 +1,15 @@
 #include "stdafx.h"
 #include "game.h"
+#include <QGraphicsView>
 
 game::game(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
 	ui.graphicsView->hide();
-	ui.pushButton_3->hide();
+	ui.btnreturn->hide();
 	ui.graphicsView->move(25, 25);
-	connect(ui.graphicsView,SIGNAL(),this,SLOT(ReadyToStart()));
+	int m_getactive_timer=startTimer(500);
 }
 void game::mousePressEvent(QMouseEvent *event) {
 	this->windowPos = this->pos();
@@ -18,9 +19,11 @@ void game::mousePressEvent(QMouseEvent *event) {
 void game::mouseMoveEvent(QMouseEvent *event) {
 	this->move(event->globalPos() - this->dPos);
 }
+void game::timerEvent(QTimerEvent *timer) {
+	
+}
 int game::ReadyToStart() {
-	qDebug()<<"123132145645656456465";
-	QMessageBox::information(this,"head","text");
+	QMessageBox::information(this,"准备好了吗？","游戏要开始啦！！");
 	return 0;
 }
 game::~game()

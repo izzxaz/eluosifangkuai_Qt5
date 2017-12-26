@@ -1,5 +1,7 @@
-﻿生成启动时间为 2016/4/25 星期一 19:33:13。
-
-已成功生成。
-
-已用时间 00:00:00.01
+﻿  stdafx.cpp
+  game.cpp
+  moc_game.cpp
+  main.cpp
+  正在生成代码...
+  qrc_game.cpp
+  eluosifangkuai.vcxproj -> F:\mygithub\eluosifangkuai_Qt5\eluosifangkuai\x64\Release\eluosifangkuai.exe

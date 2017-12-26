@@ -75,7 +75,7 @@ border-style: solid;
 background-image: url(:/game/nonborder.png);</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnclose">
     <property name="geometry">
      <rect>
       <x>478</x>
@@ -92,7 +92,7 @@ background-image: url(:/game/透明.png);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btnstart">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -109,7 +109,7 @@ background-image: url(:/game/透明.png);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnreturn">
     <property name="geometry">
      <rect>
       <x>7</x>
@@ -126,10 +126,10 @@ background-image: url(:/game/透明.png);</string>
      <string/>
     </property>
    </widget>
-   <zorder>pushButton_2</zorder>
+   <zorder>btnstart</zorder>
    <zorder>graphicsView</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_3</zorder>
+   <zorder>btnclose</zorder>
+   <zorder>btnreturn</zorder>
   </widget>
   <action name="action">
    <property name="text">
@@ -153,7 +153,7 @@ background-image: url(:/game/透明.png);</string>
  </resources>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>btnclose</sender>
    <signal>clicked()</signal>
    <receiver>gameClass</receiver>
    <slot>close()</slot>
@@ -169,7 +169,7 @@ background-image: url(:/game/透明.png);</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>btnstart</sender>
    <signal>clicked()</signal>
    <receiver>graphicsView</receiver>
    <slot>show()</slot>
@@ -185,7 +185,7 @@ background-image: url(:/game/透明.png);</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_3</sender>
+   <sender>btnreturn</sender>
    <signal>clicked()</signal>
    <receiver>graphicsView</receiver>
    <slot>hide()</slot>
@@ -201,9 +201,9 @@ background-image: url(:/game/透明.png);</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>btnstart</sender>
    <signal>clicked()</signal>
-   <receiver>pushButton_3</receiver>
+   <receiver>btnreturn</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -217,9 +217,9 @@ background-image: url(:/game/透明.png);</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_3</sender>
+   <sender>btnreturn</sender>
    <signal>clicked()</signal>
-   <receiver>pushButton_3</receiver>
+   <receiver>btnreturn</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
